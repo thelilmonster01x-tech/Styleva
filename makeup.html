@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styleva Virtual Makeup Studio — Discover Your Look</title>
+  <meta name="description" content="Experiment with makeup products virtually, test shade matches on your photo, and shop your custom beauty look.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Styleva Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-styleva-mist">
+
+  <!-- ==========================================================================
+       NAVBAR / HEADER
+       ========================================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-styleva sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 me-4" href="index.html">
+        <img src="assets/logo/styleva-logo.png" alt="Styleva Logo" class="brand-logo-img">
+        <span class="font-serif fs-4 text-white fw-bold tracking-tight">Style<span class="text-styleva-rose">va</span></span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
+        <button class="nav-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+          <i class="bi bi-bag fs-5"></i>
+          <span class="nav-icon-badge cart-count-badge" style="display:none;">0</span>
+        </button>
+        <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link nav-link-styleva" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-styleva" href="index.html#shopSection">Shop</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-styleva text-styleva-rose font-weight-bold" href="try-on.html"><i class="bi bi-camera me-1"></i> Virtual Try-On</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-styleva text-styleva-rose font-weight-bold active" href="makeup.html"><i class="bi bi-sparkles me-1"></i> Makeup Studio</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-styleva" href="cart.html"><i class="bi bi-cart me-1"></i> Cart</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-styleva" href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <button class="nav-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+            <i class="bi bi-bag fs-5"></i>
+            <span class="nav-icon-badge cart-count-badge" style="display:none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <img src="assets/logo/styleva-logo.png" alt="Styleva" style="height: 44px; filter: brightness(0) invert(1);">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column gap-2 text-uppercase fw-bold">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="index.html#shopSection">Shop Collection</a></li>
+        <li class="nav-item"><a class="nav-link text-styleva-rose" href="try-on.html"><i class="bi bi-camera me-2"></i>Virtual Try-On Studio</a></li>
+        <li class="nav-item"><a class="nav-link text-styleva-rose" href="makeup.html"><i class="bi bi-sparkles me-2"></i>Virtual Makeup Studio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="cart.html"><i class="bi bi-cart me-2"></i>Shopping Cart & Checkout</a></li>
+        <li class="nav-item"><a class="nav-link text-styleva-rose" href="contact.html"><i class="bi bi-envelope me-2"></i>Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAKEUP HERO & WORKSPACE
+       ========================================================================== -->
+  <section class="py-4">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge bg-styleva-blush text-styleva-rose px-3 py-2 rounded-pill text-uppercase tracking-wider fw-bold mb-2">
+          <i class="bi bi-sparkles me-1"></i> Digital Beauty Palette
+        </span>
+        <h1 class="font-serif display-5 mb-2">Your Beauty Look, Before You Buy.</h1>
+        <p class="text-styleva-gray lead" style="max-width: 650px; margin: 0 auto;">
+          Experiment with makeup looks virtually, test custom shade combinations on your photo, then shop your favorites.
+        </p>
+      </div>
+
+      <!-- Studio Main Workspace -->
+      <div class="studio-workspace-card p-3 p-md-4">
+        <div class="row g-4">
+          
+          <!-- LEFT PANEL: Palette Controls -->
+          <div class="col-lg-5 col-xl-4">
+            <div class="d-flex flex-column h-100">
+              
+              <!-- Input Photo Control -->
+              <div class="p-3 bg-styleva-mist rounded-3 mb-3 border">
+                <label class="form-label small text-uppercase fw-bold text-styleva-black mb-2">1. Upload Photo / Camera</label>
+                <div class="row g-2">
+                  <div class="col-6">
+                    <label class="btn btn-styleva-dark btn-sm w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                      <i class="bi bi-upload"></i> Upload Photo
+                      <input type="file" id="makeupFileInput" accept="image/*" class="d-none">
+                    </label>
+                  </div>
+                  <div class="col-6">
+                    <button type="button" id="btnStartMakeupCam" class="btn btn-styleva-soft btn-sm w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                      <i class="bi bi-camera"></i> Camera
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Category Palette Options -->
+              <div class="mb-3">
+                <label class="form-label small text-uppercase fw-bold text-styleva-black mb-2">2. Lip Color Palette</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <div class="swatch-circle active" style="background-color:#B83F58;" onclick="setLipShade('#B83F58', this)" title="Deep Rose Velvet"></div>
+                  <div class="swatch-circle" style="background-color:#E56B7F;" onclick="setLipShade('#E56B7F', this)" title="Rose Kiss"></div>
+                  <div class="swatch-circle" style="background-color:#C87265;" onclick="setLipShade('#C87265', this)" title="Blush Nude"></div>
+                  <div class="swatch-circle" style="background-color:#800020;" onclick="setLipShade('#800020', this)" title="Burgundy Plum"></div>
+                  <div class="swatch-circle" style="background-color:#D84B66;" onclick="setLipShade('#D84B66', this)" title="Soft Coral"></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small text-uppercase fw-bold text-styleva-black mb-2">3. Blush Tint</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <div class="swatch-circle active" style="background-color:#E56B7F;" onclick="setBlushShade('#E56B7F', this)" title="Petal Glow"></div>
+                  <div class="swatch-circle" style="background-color:#F8DDE2;" onclick="setBlushShade('#F8DDE2', this)" title="Soft Blush"></div>
+                  <div class="swatch-circle" style="background-color:#D84B66;" onclick="setBlushShade('#D84B66', this)" title="Sunset Berry"></div>
+                  <div class="swatch-circle" style="background-color:#FFB6C1;" onclick="setBlushShade('#FFB6C1', this)" title="Peachy Pink"></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small text-uppercase fw-bold text-styleva-black mb-2">4. Eyeshadow Accent</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <div class="swatch-circle active" style="background-color:#8D5B3A;" onclick="setEyeShade('#8D5B3A', this)" title="Bronze Nude"></div>
+                  <div class="swatch-circle" style="background-color:#D4AF37;" onclick="setEyeShade('#D4AF37', this)" title="Shimmer Gold"></div>
+                  <div class="swatch-circle" style="background-color:#808080;" onclick="setEyeShade('#808080', this)" title="Smokey Slate"></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small text-uppercase fw-bold text-styleva-black mb-2">5. Skin Tint / Foundation</label>
+                <select class="form-select form-select-sm" onchange="setSkinTint(this.value)">
+                  <option value="rgba(227, 197, 170, 0.25)">Shade 100 Fair (Dewy Glow)</option>
+                  <option value="rgba(196, 154, 118, 0.25)">Shade 200 Medium (Warm Tan)</option>
+                  <option value="rgba(141, 91, 58, 0.25)">Shade 300 Deep (Rich Bronze)</option>
+                </select>
+              </div>
+
+              <div class="mt-auto pt-3 border-top">
+                <button type="button" class="btn btn-outline-dark btn-sm w-100" onclick="resetMakeupState()">
+                  <i class="bi bi-arrow-counterclockwise"></i> Reset Makeup Palette
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT PANEL: Canvas & AR Preview -->
+          <div class="col-lg-7 col-xl-8">
+            <div class="preview-canvas-container">
+              
+              <!-- Video Stream -->
+              <video id="makeupWebcam" autoplay playsinline class="preview-user-img" style="display:none; transform: scaleX(-1);"></video>
+
+              <!-- Photo Image Base Layer -->
+              <img id="makeupBaseImg" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80" alt="Makeup Target" class="preview-user-img">
+
+              <!-- Simulated Layered Cosmetic Filters -->
+              <div id="lipMakeupOverlay" style="position:absolute; bottom:28%; left:42%; width:16%; height:8%; border-radius:50%; filter:blur(4px); pointer-events:none; transition: background-color 0.3s; background-color: #B83F58; opacity: 0.55;"></div>
+
+              <div id="blushMakeupOverlay" style="position:absolute; top:42%; left:28%; width:44%; height:16%; border-radius:50%; filter:blur(18px); pointer-events:none; transition: background-color 0.3s; background-color: #E56B7F; opacity: 0.35;"></div>
+
+              <div id="eyeMakeupOverlay" style="position:absolute; top:32%; left:34%; width:32%; height:10%; border-radius:40%; filter:blur(6px); pointer-events:none; transition: background-color 0.3s; background-color: #8D5B3A; opacity: 0.4;"></div>
+
+              <div id="skinTintOverlay" style="position:absolute; inset:0; border-radius:50%; pointer-events:none; transition: background-color 0.3s; background-color: rgba(227, 197, 170, 0.15);"></div>
+
+              <!-- Tech AR HUD circular ring -->
+              <div class="tech-ar-hud"></div>
+
+              <div class="position-absolute top-0 start-0 m-3 badge bg-dark bg-opacity-75 text-white px-3 py-2 rounded-pill fw-normal">
+                <i class="bi bi-sparkles text-styleva-rose me-1"></i> Studio Filter Active
+              </div>
+            </div>
+
+            <!-- Toolbar Controls -->
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3 p-2 bg-white rounded-3 border">
+              <span class="small text-styleva-gray"><i class="bi bi-info-circle me-1"></i> Select shade swatches on the left panel to update filter</span>
+              <div class="d-flex gap-2 ms-auto">
+                <button type="button" class="btn btn-styleva-soft btn-sm" onclick="app.showToast('Makeup look saved to profile')">
+                  <i class="bi bi-bookmark-star"></i> Save Beauty Look
+                </button>
+                <button type="button" class="btn btn-styleva-primary btn-sm" onclick="app.addToCart('prod-04'); app.addToCart('prod-05');">
+                  <i class="bi bi-bag-plus"></i> Shop Beauty Products
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+           COMPLETE YOUR LOOK SECTION
+           ========================================================================== -->
+      <div class="mt-5">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <span class="text-uppercase tracking-wider text-styleva-rose fw-bold small">Curated Bundle</span>
+            <h3 class="font-serif display-6 mb-0">Complete Your Beauty Look</h3>
+          </div>
+          <button class="btn btn-styleva-dark" onclick="app.addToCart('prod-04'); app.addToCart('prod-05'); app.addToCart('prod-06');">
+            Add Full Bundle to Bag (₦58,500)
+          </button>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 d-flex flex-row align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=300&q=80" style="width:80px; height:80px; object-fit:cover;" class="rounded">
+              <div>
+                <h6 class="mb-1 fw-bold">Soft Glam Velvet Lip Duo</h6>
+                <div class="small text-styleva-gray mb-2">₦18,500</div>
+                <button class="btn btn-styleva-soft btn-sm" onclick="app.addToCart('prod-04')">Add Lip Duo</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 d-flex flex-row align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=300&q=80" style="width:80px; height:80px; object-fit:cover;" class="rounded">
+              <div>
+                <h6 class="mb-1 fw-bold">Rose Glow Liquid Silk Blush</h6>
+                <div class="small text-styleva-gray mb-2">₦16,000</div>
+                <button class="btn btn-styleva-soft btn-sm" onclick="app.addToCart('prod-05')">Add Silk Blush</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 d-flex flex-row align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&q=80" style="width:80px; height:80px; object-fit:cover;" class="rounded">
+              <div>
+                <h6 class="mb-1 fw-bold">Dewy Skin Tint SPF 30</h6>
+                <div class="small text-styleva-gray mb-2">₦24,000</div>
+                <button class="btn btn-styleva-soft btn-sm" onclick="app.addToCart('prod-06')">Add Skin Tint</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/bootstrap.bundle.min.js"></script>
+  <!-- Styleva App JS -->
+  <script src="js/app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Makeup File Input listener
+      const fileInput = document.getElementById('makeupFileInput');
+      if (fileInput) {
+        fileInput.addEventListener('change', (e) => {
+          const file = e.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+              const imgEl = document.getElementById('makeupBaseImg');
+              const videoEl = document.getElementById('makeupWebcam');
+              if (imgEl && videoEl) {
+                videoEl.style.display = 'none';
+                imgEl.src = evt.target.result;
+                imgEl.style.display = 'block';
+                app.showToast('Photo loaded into Makeup Studio');
+              }
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+      }
+
+      // Camera Button
+      const btnCam = document.getElementById('btnStartMakeupCam');
+      if (btnCam) {
+        btnCam.addEventListener('click', async () => {
+          const success = await startWebcamStream('makeupWebcam');
+          if (success) {
+            document.getElementById('makeupBaseImg').style.display = 'none';
+            app.showToast('Live Camera Makeup Studio active');
+          }
+        });
+      }
+    });
+
+    function setLipShade(hexColor, element) {
+      app.makeupState.lipShade = hexColor;
+      if (element) setActiveSwatch(element);
+      applyMakeupEffect(app.makeupState);
+    }
+
+    function setBlushShade(hexColor, element) {
+      app.makeupState.blushShade = hexColor;
+      if (element) setActiveSwatch(element);
+      applyMakeupEffect(app.makeupState);
+    }
+
+    function setEyeShade(hexColor, element) {
+      app.makeupState.eyeShade = hexColor;
+      if (element) setActiveSwatch(element);
+      applyMakeupEffect(app.makeupState);
+    }
+
+    function setSkinTint(rgbaVal) {
+      app.makeupState.skinToneTint = rgbaVal;
+      applyMakeupEffect(app.makeupState);
+    }
+
+    function setActiveSwatch(element) {
+      const parent = element.parentElement;
+      if (parent) {
+        parent.querySelectorAll('.swatch-circle').forEach(el => el.classList.remove('active'));
+        element.classList.add('active');
+      }
+    }
+
+    function resetMakeupState() {
+      app.makeupState = {
+        lipShade: '#B83F58',
+        blushShade: '#E56B7F',
+        eyeShade: '#8D5B3A',
+        highlighter: '#FFD700',
+        skinToneTint: 'rgba(227, 197, 170, 0.15)'
+      };
+      applyMakeupEffect(app.makeupState);
+      app.showToast('Makeup palette reset');
+    }
+  </script>
+</body>
+</html>

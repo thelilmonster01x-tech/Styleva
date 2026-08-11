@@ -1,0 +1,6 @@
+{
+  "name": "Styleva",
+  "description": "Fashion, Beauty & Virtual Try-On Platform — Discover fashion and beauty, try on clothes and makeup virtually, and shop complete looks.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
